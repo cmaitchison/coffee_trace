@@ -1,6 +1,6 @@
 # coffee_trace
 
-*Add logging to your coffeescript... and then remove it!
+*Add logging to your coffeescript... and then remove it!*
 
 To install:
     gem install coffee_trace
