@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require "rubygems" 
+require "thor"
+require "coffee_trace"
+
+class App < Thor
+  desc "on FILES", "Inserts trace logging into all .coffee files below the current directory"
+  def on
+    CoffeeTrace::CLI.new.insert_logging
+  end
+
+  desc "off", "Removes trace logging all .coffee files below the current directory"
+  def off
+    CoffeeTrace::CLI.new.remove_logging 
+  end
+  
+end
+
+App.start
+

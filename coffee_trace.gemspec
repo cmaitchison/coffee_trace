@@ -6,13 +6,14 @@ Gem::Specification.new do |gem|
   gem.name        = "coffee_trace"
   gem.authors     = ["Chris Aitchison"]
   gem.email       = ["cmaitchison@gmail.com"]
-  gem.homepage    = "github.com/cmaitchison/coffee_trace"
+  gem.homepage    = "http://github.com/cmaitchison/coffee_trace"
   gem.summary     = %q{Add and remove trace logging to coffeescript}
   gem.description = %q{Add and remove trace logging to coffeescript}
 
   gem.version     = CoffeeTrace::VERSION
   gem.platform    = Gem::Platform::RUBY
 
+  gem.add_runtime_dependency("thor", "~> 0.14.6")
   gem.add_development_dependency("rspec", "~> 2.6.0")
 
   gem.files         = `git ls-files`.split("\n")
