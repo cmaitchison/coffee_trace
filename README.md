@@ -40,6 +40,10 @@ Coffee Trace will remove all log statements that it added to files below the cur
 
 ***
 
+For those interested in the source code, I was experimenting with a pattern where class names are not nouns, but the single responsibility of the class. I am not convinced yet that it is a pattern I'd use on a bigger project, but it is quite interesting and seems to help keep classes small and testable.
+
+***
+
 Copyright (c) 2011 Chris Aitchison. See LICENSE for details.
     
 
