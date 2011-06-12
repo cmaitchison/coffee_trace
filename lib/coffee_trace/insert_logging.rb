@@ -9,8 +9,8 @@ module CoffeeTrace
       result = []
       lines.each do |line|
         result.pop if is_coffee_trace_log?(line)  
-	result << line
-	result << (@insert_log_statement.for line, prefix)
+        result << line
+        result << (@insert_log_statement.for line, prefix)
       end
       result.compact
     end 

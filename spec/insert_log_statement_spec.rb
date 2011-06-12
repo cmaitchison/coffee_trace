@@ -31,7 +31,6 @@ describe CoffeeTrace::InsertLogStatement do
     assert "  renderPoi: (poi) =>", "    console.log 'renderPoi', poi #coffee_trace"
   end
 
-
   it "handles trailing spaces" do
     assert "  initialize: -> ", "    console.log 'initialize' #coffee_trace"
   end
@@ -39,6 +38,7 @@ describe CoffeeTrace::InsertLogStatement do
   it "adds a prefix if given" do
     assert_with_prefix "  initialize: -> ","trace_logger","    console.log 'trace_logger-initialize' #coffee_trace"
   end
+  
   it "indents correctly" do
     assert "a: ->", "  console.log 'a' #coffee_trace"
     assert "  a: ->", "    console.log 'a' #coffee_trace"

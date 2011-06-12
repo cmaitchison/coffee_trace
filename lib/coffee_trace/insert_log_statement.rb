@@ -1,7 +1,5 @@
-module CoffeeTrace
-  
+module CoffeeTrace  
   class InsertLogStatement
-    
     def for line, prefix=nil
       leading_spaces, method_name, args = parse_function line
       return unless leading_spaces
@@ -13,17 +11,14 @@ module CoffeeTrace
     end
 
     private
-      
     def parse_function line
       no_arg_function_match = line.scan(/^( *)(\w+): * \(? *\)? *[-=]> *$/)
-      return parse_function_with_args(line) if no_arg_function_match.empty?
-      no_arg_function_match[0]
+      no_arg_function_match.empty? ? parse_function_with_args(line) : no_arg_function_match.first
     end
 
     def parse_function_with_args line
       arg_function_match = line.scan(/^( *)(\w+): *\((.*)\) *[-=]> *$/)
-      return if arg_function_match.empty?
-      return arg_function_match[0]
+      arg_function_match.empty? ? nil : arg_function_match.first
     end
   end
 
