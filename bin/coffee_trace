@@ -4,7 +4,7 @@ require "thor"
 require "coffee_trace"
 
 class App < Thor
-  desc "on FILES", "Inserts trace logging into all .coffee files below the current directory"
+  desc "on", "Inserts trace logging into all .coffee files below the current directory"
   def on
     CoffeeTrace::CLI.new.insert_logging
   end
