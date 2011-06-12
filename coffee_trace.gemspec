@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.name        = "coffee_trace"
   gem.authors     = ["Chris Aitchison"]
   gem.email       = ["cmaitchison@gmail.com"]
-  gem.homepage    = "http://github.com/cmaitchison/coffee_trace"
+  gem.homepage    = "https://github.com/cmaitchison/coffee_trace"
   gem.summary     = %q{Add and remove trace logging to coffeescript}
   gem.description = %q{Add and remove trace logging to coffeescript}
 
